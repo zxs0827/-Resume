@@ -1,0 +1,20 @@
+//weather sprite
+
+$width: -71px;
+$height: $width;
+
+header {
+	section{
+		.weather_img{
+			background-image: url('../img/weather.png');
+		}
+	}
+}
+
+@for $tr from 0 through 13 {
+    @for $td from 0 through 3 {
+        .weather-#{$tr+$td*14} {
+            background-position: $width*$tr  $height*$td;
+        }
+    }
+}

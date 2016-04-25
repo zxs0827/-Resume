@@ -1,0 +1,603 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: #FFF;
+}
+
+html {
+    font-size: 24px;
+    font-family: "微软雅黑";
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    width: 100%;
+    height: 720px;
+    overflow: hidden;
+    /* background-image: linear-gradient(#2F2F30 0%, #6E6E6E 50%, #1B1B1B 100%); */
+    background-image: url('../img/bk.png');
+    /* background-repeat: no-repeat; */
+    /* background-size: 100% 100%; */
+    background-position: center center;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+img {
+    border: 0;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+li {
+    list-style: none;
+    outline: none;
+}
+
+ul {
+    list-style: none;
+}
+
+footer {
+    -webkit-transform: scale(0.9, 0.9);
+    transform: scale(0.9, 0.9);
+}
+
+.clear {
+    clear: both;
+}
+
+.content-box {
+    width: 1180px;
+    height: 547px;
+    background-image: -moz-linear-gradient(left center, #E9DBBD 0%, #D6BE87 100%);
+    background-image: -webkit-linear-gradient(left, #E9DBBD 0%, #D6BE87 100%);
+    position: fixed;
+    top: 99px;
+    left: 50px;
+    /* - new - */
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.main-box {
+    position: fixed;
+    top: 89px;
+    left: 67px;
+    width: 1116px;
+    height: 567px;
+}
+
+.main-box .nav-box {
+    width: 269px;
+    height: 547px;
+    margin: 10px 5px;
+    float: left;
+    position: relative;
+}
+
+.main-box .nav-box > .nav-img {
+    width: 269px;
+    height: 547px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+
+.main-box .nav-box > .nav-text {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0px;
+    background-image: -moz-linear-gradient(left, #e9dbbd, #d6be87);
+    background-image: -webkit-linear-gradient(left, #e9dbbd, #d6be87);
+    color: #723803;
+    text-align: center;
+    line-height: 100px;
+    font-size: 24px;
+}
+
+.main-box .nav-active {
+    margin-top: 0px;
+}
+
+.main-box > .banner {
+    overflow: hidden;
+    position: relative;
+}
+
+.main-box > .banner ul > li {
+    height: 567px;
+    float: left;
+}
+
+.active-cursor {
+    background-image: url("../img/active-center.png");
+    background-position: right 0px;
+    color: white !important;
+    background-repeat: no-repeat;
+    background-size: 100% 92px;
+}
+
+.active-cursor::before {
+    content: "";
+    background-image: url("../img/active-before.png");
+    width: 32px;
+    height: 92px;
+    position: absolute;
+    left: -32px;
+}
+
+.active-cursor::after {
+    content: "";
+    background-image: url("../img/active-after.png");
+    width: 21px;
+    height: 92px;
+    position: absolute;
+    right: -21px;
+}
+
+.flex-box {
+    display: flex;
+}
+
+.flex-box .left-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-box .left-box aside {
+    width: 100%;
+    height: 100px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.flex-box .left-box aside.top-btn {
+    order: -1;
+    background-image: url("../img/top-btn.png");
+}
+
+.flex-box .left-box aside.bottom-btn {
+    margin-top: auto;
+    background-image: url("../img/bottom-btn.png");
+}
+
+.flex-box .left-box .nav {
+    flex: 1;
+    display: flex;
+}
+
+.flex-box .left-box .nav > ul {
+    align-self: center;
+    width: 100%;
+    position: relative;
+}
+
+.flex-box .left-box .nav .nav-item {
+    width: 100%;
+    height: 49px;
+    color: #8b0939;
+    text-align: center;
+    line-height: 49px;
+    position: relative;
+    left: 15px;
+}
+
+.flex-box .right-box {
+    margin: 10px;
+    position: relative;
+    z-index: -1;
+}
+
+header {
+    width: 1280px;
+    height: 99px;
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+header nav.title {
+    font-size: 64px;
+    color: #FFF;
+    max-width: 500px;
+    height: 70px;
+    position: relative;
+    top: 22px;
+    left: 54px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+header nav .hotel-img {
+    width: 50px;
+    height: 50px;
+    background-image: url("../img/hotel-logo.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    align-self: center;
+}
+
+header nav .title-name {
+    font-size: 36px;
+    align-self: center;
+}
+
+header section.information {
+    display: flex;
+    flex-flow: row;
+    position: absolute;
+    top: 25px;
+    right: 50px;
+    display: none;
+}
+
+header section .weather_img {
+    background-repeat: no-repeat;
+    width: 71px;
+    height: 71px;
+}
+
+header section .flex-column {
+    flex-flow: column wrap;
+    display: flex;
+}
+
+header section .flex-column .weather_font {
+    font-size: 24px;
+    height: 32px;
+}
+
+header section .flex-column .week {
+    font-size: 24px;
+    height: 32px;
+}
+
+header section .flex-column .temper {
+    font-size: 24px;
+    height: 32px;
+    margin-left: auto;
+}
+
+header section .flex-column .date {
+    font-size: 24px;
+    height: 32px;
+    text-align: right;
+}
+
+header section .flex-first {
+    width: 75px;
+}
+
+header section .flex-second {
+    margin-left: 10px;
+    width: 140px;
+}
+
+header section .time {
+    font-size: 50px;
+    margin-top: auto;
+    min-width: 125px;
+}
+
+header .cut-line {
+    width: 4px;
+    height: 50px;
+    background-color: #FFF;
+    margin: 0px 15px;
+    border-radius: 1px;
+    line-height: 70px;
+    align-self: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 660px;
+    width: 1280px;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+footer > .center_box {
+    display: flex;
+    flex-flow: row;
+    margin: auto;
+}
+
+footer > .center_box > * {
+    margin: 0px 5px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+footer > .center_box > span {
+    align-self: center;
+}
+
+footer .footer_top {
+    background-image: url("../img/top.png");
+    width: 41px;
+    height: 34px;
+}
+
+footer .footer_bottom {
+    background-image: url("../img/bottom.png");
+    width: 41px;
+    height: 34px;
+}
+
+footer .footer_left {
+    background-image: url("../img/left.png");
+    width: 41px;
+    height: 34px;
+}
+
+footer .footer_right {
+    background-image: url("../img/right.png");
+    width: 41px;
+    height: 34px;
+}
+
+footer .footer_back {
+    background-image: url("../img/back.png");
+    width: 66px;
+    height: 34px;
+}
+
+footer .footer_ok {
+    background-image: url("../img/ok.png");
+    width: 53px;
+    height: 34px;
+}
+
+footer .footer_home {
+    background-image: url("../img/home.png");
+    width: 53px;
+    height: 34px;
+}
+
+header section .weather_img {
+    background-image: url("../img/weather.png");
+}
+
+.weather-0 {
+    background-position: 0px 0px;
+}
+
+.weather-14 {
+    background-position: 0px -71px;
+}
+
+.weather-28 {
+    background-position: 0px -142px;
+}
+
+.weather-42 {
+    background-position: 0px -213px;
+}
+
+.weather-1 {
+    background-position: -71px 0px;
+}
+
+.weather-15 {
+    background-position: -71px -71px;
+}
+
+.weather-29 {
+    background-position: -71px -142px;
+}
+
+.weather-43 {
+    background-position: -71px -213px;
+}
+
+.weather-2 {
+    background-position: -142px 0px;
+}
+
+.weather-16 {
+    background-position: -142px -71px;
+}
+
+.weather-30 {
+    background-position: -142px -142px;
+}
+
+.weather-44 {
+    background-position: -142px -213px;
+}
+
+.weather-3 {
+    background-position: -213px 0px;
+}
+
+.weather-17 {
+    background-position: -213px -71px;
+}
+
+.weather-31 {
+    background-position: -213px -142px;
+}
+
+.weather-45 {
+    background-position: -213px -213px;
+}
+
+.weather-4 {
+    background-position: -284px 0px;
+}
+
+.weather-18 {
+    background-position: -284px -71px;
+}
+
+.weather-32 {
+    background-position: -284px -142px;
+}
+
+.weather-46 {
+    background-position: -284px -213px;
+}
+
+.weather-5 {
+    background-position: -355px 0px;
+}
+
+.weather-19 {
+    background-position: -355px -71px;
+}
+
+.weather-33 {
+    background-position: -355px -142px;
+}
+
+.weather-47 {
+    background-position: -355px -213px;
+}
+
+.weather-6 {
+    background-position: -426px 0px;
+}
+
+.weather-20 {
+    background-position: -426px -71px;
+}
+
+.weather-34 {
+    background-position: -426px -142px;
+}
+
+.weather-48 {
+    background-position: -426px -213px;
+}
+
+.weather-7 {
+    background-position: -497px 0px;
+}
+
+.weather-21 {
+    background-position: -497px -71px;
+}
+
+.weather-35 {
+    background-position: -497px -142px;
+}
+
+.weather-49 {
+    background-position: -497px -213px;
+}
+
+.weather-8 {
+    background-position: -568px 0px;
+}
+
+.weather-22 {
+    background-position: -568px -71px;
+}
+
+.weather-36 {
+    background-position: -568px -142px;
+}
+
+.weather-50 {
+    background-position: -568px -213px;
+}
+
+.weather-9 {
+    background-position: -639px 0px;
+}
+
+.weather-23 {
+    background-position: -639px -71px;
+}
+
+.weather-37 {
+    background-position: -639px -142px;
+}
+
+.weather-51 {
+    background-position: -639px -213px;
+}
+
+.weather-10 {
+    background-position: -710px 0px;
+}
+
+.weather-24 {
+    background-position: -710px -71px;
+}
+
+.weather-38 {
+    background-position: -710px -142px;
+}
+
+.weather-52 {
+    background-position: -710px -213px;
+}
+
+.weather-11 {
+    background-position: -781px 0px;
+}
+
+.weather-25 {
+    background-position: -781px -71px;
+}
+
+.weather-39 {
+    background-position: -781px -142px;
+}
+
+.weather-53 {
+    background-position: -781px -213px;
+}
+
+.weather-12 {
+    background-position: -852px 0px;
+}
+
+.weather-26 {
+    background-position: -852px -71px;
+}
+
+.weather-40 {
+    background-position: -852px -142px;
+}
+
+.weather-54 {
+    background-position: -852px -213px;
+}
+
+.weather-13 {
+    background-position: -923px 0px;
+}
+
+.weather-27 {
+    background-position: -923px -71px;
+}
+
+.weather-41 {
+    background-position: -923px -142px;
+}
+
+.weather-55 {
+    background-position: -923px -213px;
+}
