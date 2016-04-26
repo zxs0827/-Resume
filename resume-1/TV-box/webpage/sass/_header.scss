@@ -1,0 +1,92 @@
+header {
+    width: 1280px;
+    height: 99px;
+    position: fixed;
+    nav {
+        &.title {
+            font-size: 64px;
+            color: #FFF;
+            max-width: 500px;
+            height: 70px;
+            position: relative;
+            top: 22px;
+            left: 54px;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+        .hotel-img{
+            width: 50px;
+            height: 50px;
+            background-image: url('../img/hotel-logo.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            align-self: center;
+        }
+        .title-name {
+            font-size: 36px;
+            align-self: center;
+        }
+    }
+    section {
+        &.information {
+            display: flex;
+            flex-flow: row;
+            position: absolute;
+            top: 25px;
+            right: 50px;
+            display: none;
+        }
+        .weather_img {
+            background-repeat: no-repeat;
+            width: 71px;
+            height: 71px;
+        }
+        
+        .flex-column {
+            flex-flow: column wrap;
+            display: flex;
+            .weather_font {
+                font-size: 24px;
+                height: 32px;
+            }
+            .week {
+                font-size: 24px;
+                height: 32px;
+            }
+            .temper {
+                font-size: 24px;
+                height: 32px;
+                margin-left: auto;
+            }
+            .date {
+                font-size: 24px;
+                
+                height: 32px;
+                text-align: right;
+            }
+        }
+
+        .flex-first {
+            width: 75px;
+        }
+        .flex-second {
+            margin-left: 10px;
+            width: 140px;
+        }
+        .time {
+            font-size: 50px;
+            margin-top: auto;
+            min-width: 125px;
+        }
+    }
+
+    .cut-line {
+            width: 4px;
+            height: 50px;
+            background-color: #FFF;
+            margin: 0px 15px;
+            border-radius: 1px;
+            line-height: 70px;
+            align-self: center;
+        }
+}

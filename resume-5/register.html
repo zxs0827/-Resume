@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	
+    <link href="register_style"  rel="stylesheet" type="text/css"/>
+	<title>用户注册页面</title>
+    
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        *{
+            box-sizing: border-box;
+        }
+        
+
+        .register_topblank{
+            width: 100%;
+            height: 50px;
+        }
+        .register_maincontent{
+            width: 360px;
+            height: 550px;
+            background-color: #FFF;
+            margin: 0 auto;
+            padding: 45px 20px 20px 20px;
+            border: 1px solid #8A9BA8;
+            border-radius: 2px;
+            box-shadow: 0px 1px 5px #8A9BA8;
+            
+        }
+        .register_maincontent h1{
+            text-align: center;
+            font-size: 21px;
+            font-weight: normal;
+            color: #424F59;
+            margin: 20px auto;
+            font-family: 微软雅黑;
+        }
+        .register_text{
+            width: 100%;
+            margin-bottom: 5px;
+            color: #8A9BA8;
+        }
+        .register_inputrow{
+            width: 100%;
+            margin-bottom: 12px;
+            position: relative;
+        }
+        input[type="email"],input[type="password"],input[type="text"]{
+            width: 100%;
+            height: 40px;
+            font-size: 16px;
+            line-height: 40px;
+            padding: 0px 0px 0px 20px;
+            color: #424F59;
+            font-family: 微软雅黑;
+            border: 1px solid #8A9BA8 ;
+            border-radius: 2px;
+            
+        }
+        
+        input:hover{
+            border: 1px solid #0095DD;
+        }
+        .register_passshow{
+            width: 55px;
+            height: 38px;
+            display: block;
+            line-height: 38px;
+            text-align: center;
+            position: absolute;
+            top: 1px;
+            right: 1px;
+            font-size: 17px;
+            border-left: 1px solid #8A9BA8;
+            cursor: pointer;
+            color: #8A9BA8;
+            background-color: #FFF;
+            -moz-user-select: none;
+        }
+        #register_xs{
+            position: absolute;
+            display: none;
+        }
+        #register_submitbtn{
+            width: 100%;
+            padding: 8px 0px;
+            background-color: #0095DD;
+            font-size: 17px;
+            text-align: center;
+            border: 0px none;
+            color: #FFF;
+            font-size: 20px;
+            font-family: 微软雅黑;
+            border-radius: 2px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .register_link{
+            text-align: right;
+        }
+        .register_link a{
+            color: #0095DD;
+            text-decoration: none;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body style="background-color: #F2F2F2;">
+
+    <!-- 顶部留余 -->
+    <div class="register_topblank">
+    
+    </div>
+    <!-- 中间内容 -->
+    <div class="register_maincontent" style="box-sizing: border-box;">
+        <h1 >注册</h1>
+        
+        <div class="register_text">
+            用户名：
+        </div>
+        <div class="register_inputrow">
+            <input type="text" autofocus="" placeholder="请输入用户名" required=""/>
+        </div>
+        
+        <div class="register_text">
+            邮  箱：
+        </div>        
+        <div class="register_inputrow">
+            <input type="email"  placeholder="请输入邮箱" required=""/>
+        </div>
+        
+        <div class="register_text">
+            密  码：
+        </div>          
+        <div class="register_inputrow">
+            <input type="password" placeholder="请输入密码" required="" id="register_ps" />
+            <form name="form1">
+            <input type="checkbox" id="register_xs" onclick="javascript:showPassword(this);"/>
+            <label class="register_passshow"  for="register_xs" id="lb_show"   >显示</label>
+            </form>
+        </div>
+        
+        <div class="register_text">
+            手  机：
+        </div>
+        <div class="register_inputrow">
+            <input type="text" autofocus="" placeholder="请输入手机号" required=""/>
+        </div>  
+              
+        <div class="register_inputrow">
+            <button id="register_submitbtn">注册</button>
+        </div>
+        
+        <div class="register_link">
+            <span style="color: #8A9BA8;">已有账户？马上 </span><a href="login.htm" >登录</a>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    function showPassword(done){
+
+        if (done.checked == true){
+            document.getElementById("register_ps").setAttribute("type","text");
+            document.getElementById("lb_show").style.color="#FFF";
+            document.getElementById("lb_show").style.background="#8A9BA8";
+        }
+        else {
+            document.getElementById("register_ps").setAttribute("type","password");
+            document.getElementById("lb_show").style.color="#8A9BA8";
+            document.getElementById("lb_show").style.background="#FFF";
+        }
+
+    }
+</script>
+</html>

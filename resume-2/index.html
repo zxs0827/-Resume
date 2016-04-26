@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html data-html-name="index">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link id="holiday" rel="stylesheet" type="text/css" href="">
+    <title>Index</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* opacity: 0.9; */
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    body {
+        background-image: url("img/bk.jpg"); 
+        background-repeat: no-repeat;
+        background-size: 100%;
+        font-family: "Droid Sans Fallback";
+        background-attachment: fixed;
+    }
+    
+    [class^="nav_box_"] {
+        width: 260px;
+        height: 690px;
+        left: 40px;
+        top: 30px;
+        /* position: fixed; */
+        position: absolute;
+    }
+    
+    .nav_box_white {
+        /* background-color: red; */
+        background-color: rgba(216, 216, 216, .7);
+    }
+    
+    .nav_box_black {
+        height: 685px;
+        background-color: rgba(35, 39, 44, .7);
+        transform: skew(-5deg);
+        transform-origin: center center;
+    }
+    
+    .index_logo {
+        /* position: fixed; */
+        position: absolute;
+        width: 290px;
+        height: 161px;
+        line-height: 161px;
+        text-align: center;
+        font-size: 0;
+        top: 25px;
+        left: 40px;
+        background-image: url("img/logo-bk.png");
+        background-repeat: no-repeat;
+        background-size: 100% 96%;
+    }
+    
+    #logo {
+        vertical-align: middle;
+    }
+    
+    .nav_box_main,
+    .nav_box_black {
+        /* background-color: blue; */
+        padding-top: 70px;
+    }
+    
+    .nav_li,
+    .active_li {
+        width: 100%;
+        height: 65px;
+        line-height: 65px;
+        /* text-align: center; */
+        font-size: 30px;
+        color: white;
+        /* padding-left: 40px; */
+        position: relative;
+        /* outline: 2px dashed red; */
+    }
+    
+    .nav_text {
+        background-repeat: no-repeat;
+        background-position: center left 30px;
+        padding-left: 90px;
+    }
+    
+    .nav_li:nth-child(1) > .nav_text {
+        background-image: url("img/0-2.png");
+    }
+    
+    .nav_li:nth-child(2) > .nav_text {
+        background-image: url("img/1-2.png");
+    }
+    
+    .nav_li:nth-child(3) > .nav_text {
+        background-image: url("img/2-2.png");
+    }
+    
+    .nav_li:nth-child(4) > .nav_text {
+        background-image: url("img/3-2.png");
+    }
+    
+    .nav_li:nth-child(5) > .nav_text {
+        background-image: url("img/4-2.png");
+    }
+    
+    .nav_li:nth-child(6) > .nav_text {
+        background-image: url("img/5-2.png");
+    }
+    
+    .flex-ul {
+        display: flex;
+    }
+    
+    nav.menu,
+    nav.disguise_menu {
+        height: 100%;
+    }
+    
+    .menu .flex-ul,
+    .disguise_menu .flex-ul {
+        height: 100%;
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+    
+    li.sub_li {
+        float: left;
+        width: 260px;
+        height: 65px;
+        text-align: center;
+        position: relative;
+    }
+    
+    .sub_box {
+        width: 780px;
+        position: absolute;
+        top: 0;
+        left: 260px;
+        height: 65px;
+        overflow: hidden;
+        display: none;
+    }
+    
+    .active-nav .active_before {
+        /* content: url(""); */
+        background-image: url("img/bottom.png");
+        width: 100%;
+        height: 65px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    
+    .active-nav .active_after {
+        /* content: url(); */
+        background-image: url("img/active-1.png");
+        width: 278px;
+        height: 63px;
+        position: absolute;
+        left: -9px;
+        top: 0;
+    }
+    
+    .active-sub .active_before {
+        /* content: url("img/bottom.png"); */
+        background-image: url("img/bottom.png");
+        width: 100%;
+        height: 65px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    
+    .active-sub .active_after {
+        /* content: url(""); */
+        background-image: url("img/active-2.png");
+        width: 278px;
+        height: 65px;
+        position: absolute;
+        left: -9px;
+        top: 0;
+    }
+    
+    .page_button::after {
+        content: "";
+        width: 60px;
+        height: 65px;
+        position: absolute;
+        background-color: rgba(29, 31, 35, 0.9);
+        background-image: url('img/r-1.png');
+        right: -60px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        box-shadow: -5px 0px 5px black;
+    }
+    
+    .active-li::before {
+        content: "";
+        background-color: #8C003C;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: -5px;
+        z-index: 0;
+        transform: skew(-5deg);
+    }
+    
+    .sub_li > span {
+        position: relative;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- 导航 -->
+    <nav>
+        <!-- 白块 -->
+        <div class="nav_box_white"></div>
+        <!-- 黑块 -->
+        <div class="nav_box_black">
+            <!-- 伪菜单 -->
+            <nav class="disguise_menu">
+                <ul class="flex-ul">
+                    <li class="active_li active-nav">
+                        <div class="active_before"></div>
+                        <div class="active_after"></div>
+                    </li>
+                    <li class="active_li">
+                        <div class="active_before"></div>
+                        <div class="active_after"></div>
+                    </li>
+                    <li class="active_li active-sub">
+                        <div class="active_before page_button"></div>
+                        <div class="active_after"></div>
+                    </li>
+                    <li class="active_li">
+                        <div class="active_before"></div>
+                        <div class="active_after"></div>
+                    </li>
+                    <li class="active_li">
+                        <div class="active_before"></div>
+                        <div class="active_after"></div>
+                    </li>
+                    <li class="active_li">
+                        <div class="active_before"></div>
+                        <div class="active_after"></div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- LOGO -->
+        <div class="index_logo">
+            <img src="img/logo.png" height="111" width="110" id="logo" alt="logo">
+        </div>
+        <!-- MAIN -->
+        <div class="nav_box_main">
+            <nav class="menu">
+                <ul class="flex-ul">
+                    <li class="nav_li" id="index_1">
+                        <div class="nav_text">电视直播</div>
+                    </li>
+                    <li class="nav_li" id="index_2">
+                        <div class="nav_text">客房娱乐</div>
+                    </li>
+                    <li class="nav_li" id="index_3">
+                        <div class="nav_text">我的酒店</div>
+                        <div class="sub_box">
+                            <ul class="sub_ul">
+                                <li class="sub_li"><span>我的账单</span></li>
+                                <li class="sub_li active-li"><span>客房消息</span></li>
+                                <li class="sub_li"><span>团客名单</span></li>
+                                <li class="sub_li"><span>团客行程</span></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav_li" id="index_4">
+                        <div class="nav_text">酒店服务</div>
+                    </li>
+                    <li class="nav_li" id="index_5">
+                        <div class="nav_text">旅行助手</div>
+                    </li>
+                    <li class="nav_li" id="index_6">
+                        <div class="nav_text">更多设置</div>
+                        <div class="sub_box">
+                            <ul class="sub_ul">
+                                <li class="sub_li_1">语言设置</li>
+                                <li class="sub_li_2">PIN设置</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </nav>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        var index = $(".active-sub").index(".active_li");
+        if (index != -1) {
+            $(".nav_li").eq(index).children('.nav_text').css({
+                "color": "#42474D"
+            });
+
+            $(".nav_li").eq(index).children('.sub_box').css({
+                "display": "block"
+            });
+
+            $(".nav_li").eq(index).children('.nav_text').css({
+                "background-image": "url('img/" + index + "-1.png')"
+            });
+
+            var length = $(".nav_li").eq(index).find('.sub_li').length;
+
+            $(".active-sub .active_before").css("width", "" + (length * 100) + "%");
+        }
+
+
+
+    });
+    </script>
+</body>
+
+</html>

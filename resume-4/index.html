@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>团客行程</title>
+    <style type="text/css" media="screen">
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    html {
+        font-family: "Droid Sans Fallback";
+        color: #F1F1F1;
+        background-image: url('book.jpg');
+        width: 100%;
+        height: 720px;
+        background-size: 100% 100%;
+        position: relative;
+        background-repeat: no-repeat;
+    }
+    
+    header {
+        font-size: 64px;
+        position: absolute;
+        top: 100px;
+        left: 230px;
+    }
+    
+    header::after {
+        content: ' /';
+    }
+    
+    header::before {
+        content: '/ ';
+    }
+    
+    hr.line {
+        width: 100%;
+        height: 7px;
+        background-image: linear-gradient(#FFF, #000);
+        border: none;
+        position: absolute;
+        top: 195px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    hr.line-right,
+    hr.line-left-1,
+    hr.line-left-2 {
+        width: 2px;
+        height: 450px;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        right: 5px;
+        bottom: 0px;
+    }
+    
+    hr.line-left-1 {
+        width: 3px;
+        left: 0px;
+        top: 0px;
+    }
+    
+    hr.line-left-2 {
+        width: 2px;
+        left: 5px;
+        top: 0px;
+    }
+    
+    .background-img-black {
+        background-color: rgba(35, 39, 44, 0.78);
+        width: 1000px;
+        height: 450px;
+        position: absolute;
+        margin: 0 auto;
+        top: 190px;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        transform: skew(-7deg);
+    }
+    
+    .background-img-white,
+    .main-box {
+        background-color: rgba(237, 237, 237, 0.78);
+        width: 1000px;
+        height: 420px;
+        position: absolute;
+        margin: 0 auto;
+        top: 210px;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        transform: skew(-17deg);
+    }
+    
+    .background-img-white ul.ul-color-box {
+        display: flex;
+        flex-direction: column;
+        height: 420px;
+    }
+    
+    .background-img-white li.color-list {
+        width: 100%;
+        height: 39px;
+        line-height: 39px;
+        margin-bottom: 2px;
+        background-color: gray;
+        flex: none;
+    }
+    
+    .background-img-white li.color-list:first-child {
+        background-color: transparent;
+        height: 45px;
+    }
+    
+    .background-img-white li.color-list:last-child {
+        flex: auto;
+    }
+    /*    .background-img-white .nav-title {
+        background-color: transparent;
+        height: 45px;
+    }*/
+    
+    .main-box {
+        background-color: transparent;
+    }
+    
+    .main-box > * {
+        transform: skew(17deg);
+        color: #23272c;
+    }
+    
+    .main-box > h1 {
+        font-size: 1em;
+        font-weight: normal;
+    }
+    
+    .main-box nav li {
+        text-align: center;
+        height: 45px;
+        line-height: 45px;
+        margin-bottom: 2px;
+    }
+
+    .main-item > ul > li {
+        text-align: left;
+        padding-left: 50px;
+        height: 39px;
+        line-height: 40px;
+        margin-bottom: 2px;
+    }
+    
+    nav > ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+    }
+    
+    li {
+        flex: auto;
+        font-size: 24px;
+        list-style: none;
+    }
+    
+    footer {
+        width: 1000px;
+        height: 45px;
+        background-color: rgba(35, 39, 44, 0.78);
+        transform: skew(-30deg);
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        /*top: 585px;*/
+        bottom: 0;
+        left: 13px;
+        position: absolute;
+    }
+    footer  * {
+        transform: skew(30deg);
+    }
+    ul.flex-ul {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+    }
+    ul.flex-ul > li {
+        flex: 1;
+    }
+
+    .active {
+        outline: 2px solid red !important;
+        background-color: rgba(255, 0, 0, 0.32) !important;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- 标题 -->
+    <header>团客行程</header>
+    <!-- 线 -->
+    <hr class="line">
+    <!-- 黑色背景 -->
+    <div class="background-img-black"></div>
+    <!-- 白色背景 -->
+    <div class="background-img-white">
+        <ul class="ul-color-box">
+            <li class="color-list"></li>
+            <li class="color-list"></li>
+            <li class="color-list"></li>
+            <li class="color-list"></li>
+            <li class="color-list"></li>
+            <li class="color-list active"></li>
+            <li class="color-list"></li>
+            <li class="color-list"></li>
+            <li class="color-list"></li>
+            <li class="color-list"></li>
+        </ul>
+        <hr class="line-right">
+        <hr class="line-left-1">
+        <hr class="line-left-2">
+        <!-- 页脚 -->
+        <footer>
+            <span></span>
+        </footer>
+    </div>
+    <!-- 数据内容 -->
+    <section class="main-box">
+        <nav>
+            <ul>
+                <li>时间</li>
+                <li>地点</li>
+                <li>行程</li>
+            </ul>
+        </nav>
+        <div class="main-item">
+           <ul class="flex-ul">
+               <li>2015/01/13 15:00</li>
+               <li>天通北苑一区南门</li>
+               <li>天通苑 大悦城 疯狂购物</li>
+           </ul>
+        </div>
+        <div class="main-item">
+           <ul class="flex-ul">
+               <li>2015/01/13 17:00</li>
+               <li>北京长城</li>
+               <li>天徒步旅行</li>
+           </ul>
+        </div>
+        <div class="main-item">
+           <ul class="flex-ul">
+               <li>2015/02/31 17:00</li>
+               <li>颐和园</li>
+               <li>旅游观光</li>
+           </ul>
+        </div>
+        <div class="main-item">
+           <ul class="flex-ul">
+               <li>2015/01/13 15:00</li>
+               <li>天通北苑一区南门</li>
+               <li>天通苑 大悦城 疯狂购物</li>
+           </ul>
+        </div>
+        <div class="main-item">
+           <ul class="flex-ul">
+               <li>2015/01/13 17:00</li>
+               <li>北京长城</li>
+               <li>天徒步旅行</li>
+           </ul>
+        </div>
+        <div class="main-item">
+           <ul class="flex-ul">
+               <li>2015/02/31 17:00</li>
+               <li>颐和园</li>
+               <li>旅游观光</li>
+           </ul>
+        </div>
+        <div class="main-item">
+           <ul class="flex-ul">
+               <li>2015/01/13 15:00</li>
+               <li>天通北苑一区南门</li>
+               <li>天通苑 大悦城 疯狂购物</li>
+           </ul>
+        </div>
+        <div class="main-item">
+           <ul class="flex-ul">
+               <li>2015/01/13 17:00</li>
+               <li>北京长城</li>
+               <li>天徒步旅行</li>
+           </ul>
+        </div>
+    </section>
+</body>
+
+</html>

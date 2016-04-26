@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	
+    <link href="login_style"  rel="stylesheet" type="text/css"/>
+	<title>µÇÂ½Ò³Ãæ</title>
+    
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        *{
+            box-sizing: border-box;
+        }
+        
+        .login_logo{
+            width: 200px;
+            height: 120px;
+            background-image: url("login_logo.png");
+            margin: 0 auto;
+        }
+        .login_topblank{
+            width: 100%;
+            height: 50px;
+        }
+        .login_maincontent{
+            width: 360px;
+            height: 350px;
+            background-color: #FFF;
+            margin: 0 auto;
+            padding: 45px 20px 20px 20px;
+            border: 1px solid #8A9BA8;
+            border-radius: 2px;
+            box-shadow: 0px 1px 5px #8A9BA8;
+            
+        }
+        .login_maincontent h1{
+            text-align: center;
+            font-size: 21px;
+            font-weight: normal;
+            color: #424F59;
+            margin: 20px auto;
+            font-family: Î¢ÈíÑÅºÚ;
+        }
+        .login_inputrow{
+            width: 100%;
+            margin-bottom: 12px;
+            position: relative;
+        }
+        input[type="email"],input[type="password"],input[type="text"]{
+            width: 100%;
+            height: 40px;
+            font-size: 16px;
+            line-height: 40px;
+            padding: 0px 0px 0px 20px;
+            color: #424F59;
+            font-family: Î¢ÈíÑÅºÚ;
+            border: 1px solid #8A9BA8 ;
+            border-radius: 2px;
+            
+        }
+        
+        input:hover{
+            border: 1px solid #0095DD;
+        }
+        .login_passshow{
+            width: 55px;
+            height: 38px;
+            display: block;
+            line-height: 38px;
+            text-align: center;
+            position: absolute;
+            top: 1px;
+            right: 1px;
+            font-size: 17px;
+            border-left: 1px solid #8A9BA8;
+            cursor: pointer;
+            color: #8A9BA8;
+            background-color: #FFF;
+            -moz-user-select: none;
+        }
+        #login_xs{
+            position: absolute;
+            display: none;
+        }
+        #login_submitbtn{
+            width: 100%;
+            padding: 8px 0px;
+            background-color: #0095DD;
+            font-size: 17px;
+            text-align: center;
+            border: 0px none;
+            color: #FFF;
+            font-size: 20px;
+            font-family: Î¢ÈíÑÅºÚ;
+            border-radius: 2px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        
+        .login_link a{
+            color: #0095DD;
+            text-decoration: none;
+            display: inline-block;
+            width: 40%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body style="background-color: #F2F2F2;">
+
+    <!-- ¶¥²¿ÁôÓà -->
+    <div class="login_topblank">
+        <div class="login_logo"></div>
+    </div>
+    <!-- ÖÐ¼äÄÚÈÝ -->
+    <div class="login_maincontent" style="box-sizing: border-box;">
+        <h1 >µÇÂ¼</h1>
+        <div class="login_inputrow">
+            <input type="email" autofocus="" placeholder="ÇëÊäÈëÓÊÏä" required=""/>
+        </div>
+        
+        <div class="login_inputrow">
+            <input type="password" placeholder="ÇëÊäÈëÃÜÂë" required="" id="login_ps" />
+            <form name="form1">
+            <input type="checkbox" id="login_xs" onclick="javascript:showPassword(this);"/>
+            <label class="login_passshow"  for="login_xs" id="lb_show"   >ÏÔÊ¾</label>
+            </form>
+        </div>
+        
+        <div class="login_inputrow">
+            <button id="login_submitbtn">µÇÂ¼</button>
+        </div>
+        
+        <div class="login_link">
+            <a href="#" >Íü¼ÇÃÜÂë</a>
+            
+            <a href="register.htm" style="float: right;">Á¢¼´×¢²á</a>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    function showPassword(done){
+
+        if (done.checked == true){
+            document.getElementById("login_ps").setAttribute("type","text");
+            document.getElementById("lb_show").style.color="#FFF";
+            document.getElementById("lb_show").style.background="#8A9BA8";
+        }
+        else {
+            document.getElementById("login_ps").setAttribute("type","password");
+            document.getElementById("lb_show").style.color="#8A9BA8";
+            document.getElementById("lb_show").style.background="#FFF";
+        }
+
+    }
+</script>
+</html>

@@ -1,0 +1,103 @@
+/*字体飞入 CSS 杨样式*/
+
+#font_fly_box {
+    position: absolute;
+    z-index: 400;
+    left: 15%;
+    top: 300px;
+}
+
+#font1 {
+    display: inline-block;
+    vertical-align: middle;
+    width: 98px;
+    height: 98px;
+    opacity: 0;
+    background-image: url("../img/rhzyhyn.png");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    animation: 0.4s ease-out 0s normal forwards 1 running el-t-t;
+}
+
+#font2 {
+    display: inline-block;
+    vertical-align: middle;
+    width: 98px;
+    height: 98px;
+    opacity: 0;
+    background-image: url("../img/rhzyhyn.png");
+    background-repeat: no-repeat;
+    background-position: 0px -98px;
+    animation: 0.4s ease-out 0.2s normal forwards 1 running el-t-t;
+}
+
+#font3 {
+    display: inline-block;
+    vertical-align: middle;
+    width: 98px;
+    height: 98px;
+    opacity: 0;
+    background-image: url("../img/rhzyhyn.png");
+    background-repeat: no-repeat;
+    background-position: 0px -196px;
+    animation: 0.4s ease-out 0.4s normal forwards 1 running el-t-t;
+}
+
+#font4 {
+    display: inline-block;
+    vertical-align: middle;
+    width: 98px;
+    height: 98px;
+    opacity: 0;
+    background-image: url("../img/rhzyhyn.png");
+    background-repeat: no-repeat;
+    background-position: 0px -294px;
+    animation: 0.4s ease-out 0.6s normal forwards 1 running el-t-t;
+}
+
+#font5 {
+    display: inline-block;
+    vertical-align: middle;
+    width: 98px;
+    height: 98px;
+    opacity: 0;
+    background-image: url("../img/rhzyhyn.png");
+    background-repeat: no-repeat;
+    background-position: 0px -392px;
+    animation: 0.4s ease-out 0.8s normal forwards 1 running el-t-t;
+}
+
+#font6 {
+    display: inline-block;
+    vertical-align: middle;
+    width: 98px;
+    height: 98px;
+    opacity: 0;
+    background-image: url("../img/rhzyhyn.png");
+    background-repeat: no-repeat;
+    background-position: 0px -490px;
+    animation: 0.4s ease-out 1.0s normal forwards 1 running el-t-t;
+}
+
+#font7 {
+    display: inline-block;
+    vertical-align: middle;
+    width: 98px;
+    height: 98px;
+    opacity: 0;
+    background-image: url("../img/rhzyhyn.png");
+    background-repeat: no-repeat;
+    background-position: 0px -588px;
+    animation: 0.4s ease-out 1.2s normal forwards 1 running el-t-t;
+}
+
+@keyframes el-t-t {
+    0% {
+        opacity: 0;
+        transform: scale(5, 5) translate(-100px, -15px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1, 1) translate(0px, 0px);
+    }
+}

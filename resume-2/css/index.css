@@ -1,0 +1,209 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* opacity: 0.9; */
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    body {
+        /* background-image: url("img/bk.png"); */
+        background-repeat: no-repeat;
+        /* background-color: black; */
+        font-family: "Droid Sans Fallback";
+    }
+    
+    [class^="nav_box_"] {
+        width: 260px;
+        height: 690px;
+        left: 40px;
+        top: 30px;
+        /* position: fixed; */
+        position: absolute;
+    }
+    
+    .nav_box_white {
+        /* background-color: red; */
+        background-color: rgba(216, 216, 216, .7);
+    }
+    
+    .nav_box_black {
+        height: 685px;
+        background-color: rgba(35, 39, 44, .7);
+        transform: skew(-5deg);
+        transform-origin: center center;
+    }
+    
+    .index_logo {
+        /* position: fixed; */
+        position: absolute;
+        width: 290px;
+        height: 161px;
+        line-height: 161px;
+        text-align: center;
+        font-size: 0;
+        top: 25px;
+        left: 40px;
+        background-image: url("img/logo-bk.png");
+        background-repeat: no-repeat;
+        background-size: 100% 96%;
+    }
+    
+    #logo {
+        vertical-align: middle;
+    }
+    
+    .nav_box_main,
+    .nav_box_black {
+        /* background-color: blue; */
+        padding-top: 70px;
+    }
+    
+    .nav_li,
+    .active_li {
+        width: 100%;
+        height: 65px;
+        line-height: 65px;
+        /* text-align: center; */
+        font-size: 30px;
+        color: white;
+        /* padding-left: 40px; */
+        position: relative;
+        /* outline: 2px dashed red; */
+    }
+    
+    .nav_text {
+        background-repeat: no-repeat;
+        background-position: center left 30px;
+        padding-left: 90px;
+    }
+    
+    .nav_li:nth-child(1) > .nav_text {
+        background-image: url("img/0-2.png");
+    }
+    
+    .nav_li:nth-child(2) > .nav_text {
+        background-image: url("img/1-2.png");
+    }
+    
+    .nav_li:nth-child(3) > .nav_text {
+        background-image: url("img/2-2.png");
+    }
+    
+    .nav_li:nth-child(4) > .nav_text {
+        background-image: url("img/3-2.png");
+    }
+    
+    .nav_li:nth-child(5) > .nav_text {
+        background-image: url("img/4-2.png");
+    }
+    
+    .nav_li:nth-child(6) > .nav_text {
+        background-image: url("img/5-2.png");
+    }
+    
+    .flex-ul {
+        display: flex;
+    }
+    
+    nav.menu,
+    nav.disguise_menu {
+        height: 100%;
+    }
+    
+    .menu .flex-ul,
+    .disguise_menu .flex-ul {
+        height: 100%;
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+    
+    li.sub_li {
+        float: left;
+        width: 260px;
+        height: 65px;
+        text-align: center;
+        position: relative;
+    }
+    
+    .sub_box {
+        width: 780px;
+        position: absolute;
+        top: 0;
+        left: 260px;
+        height: 65px;
+        overflow: hidden;
+        display: none;
+    }
+    
+    .active-nav .active_before {
+        /* content: url(""); */
+        background-image: url("img/bottom.png");
+        width: 100%;
+        height: 65px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    
+    .active-nav .active_after {
+        /* content: url(); */
+        background-image: url("img/active-1.png");
+        width: 278px;
+        height: 63px;
+        position: absolute;
+        left: -9px;
+        top: 0;
+    }
+    
+    .active-sub .active_before {
+        /* content: url("img/bottom.png"); */
+        background-image: url("img/bottom.png");
+        width: 100%;
+        height: 65px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    
+    .active-sub .active_after {
+        /* content: url(""); */
+        background-image: url("img/active-2.png");
+        width: 278px;
+        height: 65px;
+        position: absolute;
+        left: -9px;
+        top: 0;
+    }
+    
+    .page_button::after {
+        content: "";
+        width: 60px;
+        height: 65px;
+        position: absolute;
+        background-color: rgba(29, 31, 35, 0.9);
+        background-image: url('img/r-1.png');
+        right: -60px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        box-shadow: -5px 0px 5px black;
+    }
+    
+    .active-li::before {
+        content: "";
+        background-color: #8C003C;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: -5px;
+        z-index: 0;
+        transform: skew(-5deg);
+    }
+
+    .sub_li > span {
+    	position: relative;
+    }
