@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>canvas</title>
+</head>
+
+<body>
+    <canvas id="canvas">
+    </canvas>
+    <script type="text/javascript" src="digit.js"></script>
+    <script type="text/javascript">
+    window.onload = function() {
+        var canvas = document.getElementById("canvas");
+        canvas.width = 1000;
+        canvas.height = 500;
+        // canvas.style.border = "1px solid #ccc";
+        canvas.style.margin = "auto";
+        canvas.style.display = "block";
+
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#910827";
+
+        var r = 5; //半径
+
+        var NUMWIDTH = 2 * r * 8;
+        var MARGINTOP = 20;
+
+
+        function draw(x, y, num, ctx) {
+            for (var i = 0; i < digit[num].length; i++) {
+                for (var j = 0; j < digit[num][i].length; j++) {
+                    if (digit[num][i][j] != 0) {
+                        ctx.beginPath();
+                        ctx.arc(x + 2 * r * j + r, y + 2 * r * i + r, r, 0, 2 * Math.PI, false);
+                        ctx.closePath();
+                        ctx.fill();
+                    }
+                };
+            };
+        }
+
+        setInterval(function() {
+            ctx.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
+            var date = new Date();
+            var hour = date.getHours();
+            var minutes = date.getMinutes();
+            var seconds = date.getSeconds();
+
+            draw(NUMWIDTH * 0, MARGINTOP, parseInt(hour / 10), ctx);
+            draw(NUMWIDTH * 1, MARGINTOP, parseInt(hour % 10), ctx);
+            draw(NUMWIDTH * 2, MARGINTOP, 10, ctx);
+            draw(NUMWIDTH * 3, MARGINTOP, parseInt(minutes / 10), ctx);
+            draw(NUMWIDTH * 4, MARGINTOP, parseInt(minutes % 10), ctx);
+            draw(NUMWIDTH * 5, MARGINTOP, 10, ctx);
+            draw(NUMWIDTH * 6, MARGINTOP, parseInt(seconds / 10), ctx);
+            draw(NUMWIDTH * 7, MARGINTOP, parseInt(seconds % 10), ctx);
+        }, 50);
+
+
+    }
+    </script>
+</body>
+
+</html>

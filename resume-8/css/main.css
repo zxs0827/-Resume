@@ -1,0 +1,310 @@
+*::-moz-selection {
+    background-color: #ff9900;
+}
+
+* {
+    transition: all 0.5s;
+}
+
+body {
+    font-family: "normal";
+    line-height: 1;
+    font-size: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+#book {
+    width: 99%;
+    color: white;
+    border-bottom: 2px solid black;
+    background-color: black;
+    display: block;
+    background-image: repeating-linear-gradient( 45deg, #C98D38 0px, #855F2A 35px, transparent 35px, transparent 70px);
+    text-align: center;
+    text-shadow: 0px 2px 2px black;
+    letter-spacing: 0.1em;
+    font-size: 1.4em;
+    text-decoration: underline;
+    padding: 0.5%;
+}
+
+#wrapper {
+    width: 96%;
+    margin: 0 auto;
+    max-width: 1306px;
+}
+
+header {
+    background-image: url('../img/buntingFW.png');
+    padding-top: 75px;
+    background-repeat: repeat-x;
+    font-size: 3em;
+    width: 97.9166667%;
+    margin: 0 auto;
+}
+
+#isnot {
+    color: #dfdada;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: table;
+    width: 100%;
+}
+
+nav li {
+    display: table-cell;
+    text-align: center;
+    font-size: 25px;
+}
+
+nav li {
+    font: 1.875em/42px "normal";
+}
+
+li:first-child {
+    text-align: left;
+}
+
+li:last-child {
+    text-align: right;
+}
+
+nav ul li a {
+    color: black;
+    display: block;
+}
+
+
+/*nav ul li a:hover {
+    -webkit-animation: warning 1.5s linear infinite ;
+    -o-animation: warning 1.5s linear infinite ;
+    animation: warning 1.5s linear infinite ;
+}*/
+
+nav ul li a:hover {
+    animation: warning 1.5s infinite ease-in alternate;
+    /*animation: moveing 1.0s linear ;*/
+}
+
+@keyframes warning {
+    0% {
+        /*color: blue;*/
+        text-shadow: none;
+    }
+    100% {
+        /*color: orange;*/
+        text-shadow: 0px 0px 30px black;
+    }
+}
+
+@keyframes moveing {
+    0% {}
+    100% {}
+}
+
+
+/*@keyframes warning {
+    0% {
+        text-shadow: 0px 0px 4px #000000;
+    }
+    50% {
+        text-shadow: 0 0 40px #000000;
+    }
+    100% {
+        text-shadow: 0 0 4px #000000;
+    }
+}*/
+
+nav ul li:nth-child(2n+1) a {
+    color: red;
+}
+
+nav {
+    border-bottom: 4px double #dfdfdf;
+    width: 97%;
+    padding: 0 1.5%;
+    margin-top: 26px;
+}
+
+aside {
+    float: left;
+    width: 20%;
+    /*border-right: 1px solid #dfdfdf;*/
+    margin-top: 53px;
+    padding: 0 4%;
+    box-shadow: 1px 0px 0px #898989;
+}
+
+aside h1 {
+    font-size: 1.875em;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+section {
+    overflow: hidden;
+}
+
+[class^='aside_box_'] img {
+    width: 100%;
+    box-shadow: 0px 2px 7px black;
+}
+
+.img {
+    float: left;
+    max-width: 47%;
+}
+
+.button {
+    display: block;
+    width: 90%;
+    height: 26px;
+    border-radius: 5px;
+    border: 1px solid #999999;
+    text-align: center;
+    line-height: 26px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    color: #999999;
+}
+
+.left_img {
+    transform: rotate(-3deg);
+}
+
+.right_img {
+    transform: rotate(7deg);
+}
+
+#content {
+    width: 70%;
+    margin-top: 50px;
+    float: right;
+    /*margin-left: 20px;*/
+}
+
+#content img {
+    float: left;
+    max-width: 202px;
+    width: 22%;
+    margin-right: 1%;
+}
+
+#content h1 {
+    font-size: 90px;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    text-shadow: 1px 0px #FFF, 4px 4px #dad7d7;
+}
+
+#content p {
+    font-size: 36px;
+    color: #757474;
+    font-family: "colabThi";
+}
+
+button {
+    background-color: #B01C20;
+    padding: 30px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    font-size: 2.25em;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 5px 1px 5px #555;
+    /*margin-left: 10px;*/
+}
+
+footer {
+    border-top: 4px double #dfdfdf;
+    margin-top: 50px;
+    float: left;
+    clear: both;
+    padding: 35px 0px 80px 0px;
+    width: 100%;
+    background-image: url('../img/buntingFWinvert.png');
+    background-repeat: repeat-x;
+    background-position: bottom;
+    text-align: center;
+    font-size: 1.2em;
+    color: gray;
+}
+
+@font-face {
+    font-family: "normal";
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/BebasNeue-webfont.woff');
+}
+
+@font-face {
+    font-family: "colabThi";
+    src: url("../fonts/ColabThi-webfont.woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    header {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    nav ul li {
+        display: list-item;
+        text-align: left;
+    }
+    nav ul li:last-child {
+        text-align: left;
+    }
+    nav ul li a:hover {
+        margin-left: 5%;
+        padding-left: 2%;
+        background-color: #aaa;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #content {
+        width: 96%;
+        margin: 2%;
+    }
+    #content p {
+        margin: 20px 0px;
+        font-size: 2em
+    }
+    aside {
+        width: 96%;
+        box-shadow: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    button {
+        width: 100%;
+    }
+    #content p {
+        font-size: 1.7em;
+    }
+    button {
+        font-size: 1.5em;
+        padding: 10px 10px;
+        margin-top: 10px;
+    }
+}
