@@ -300,6 +300,7 @@ header section .time {
     font-size: 50px;
     margin-top: auto;
     min-width: 125px;
+    font-family: "timer";
 }
 
 header .cut-line {
