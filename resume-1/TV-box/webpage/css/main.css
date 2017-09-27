@@ -298,9 +298,15 @@ header section .flex-second {
 
 header section .time {
     font-size: 50px;
-    margin-top: auto;
     min-width: 125px;
     font-family: "timer";
+    display: flex;
+    align-items: center;
+}
+
+header section .time .dot {
+    align-self: baseline;
+    line-height: 60px;
 }
 
 header .cut-line {
@@ -312,6 +318,8 @@ header .cut-line {
     line-height: 70px;
     align-self: center;
 }
+
+
 
 footer {
     display: flex;
